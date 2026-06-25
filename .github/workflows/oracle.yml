@@ -1,0 +1,42 @@
+name: Oracle ARM Instance Creator
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  create-instance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create config files
+        run: |
+          echo "${{ secrets.OCI_CONFIG }}" > oci_config
+          echo "${{ secrets.OCI_PRIVATE_KEY }}" > oci_api_private_key.pem
+
+      - name: Create oci.env
+        run: |
+          cat > oci.env << EOF
+          OCI_CONFIG=${{ github.workspace }}/oci_config
+          OCT_FREE_AD=${{ secrets.OCT_FREE_AD }}
+          OCI_SUBNET_ID=${{ secrets.OCI_SUBNET_ID }}
+          OCI_IMAGE_ID=${{ secrets.OCI_IMAGE_ID }}
+          DISPLAY_NAME=my-arm-instance
+          REQUEST_WAIT_TIME_SECS=50
+          ASSIGN_PUBLIC_IP=True
+          NOTIFY_EMAIL=False
+          SSH_AUTHORIZED_KEYS_FILE=${{ github.workspace }}/ssh_key.pub
+          EOF
+
+      - name: Run script
+        run: timeout 250 python main.py || true
