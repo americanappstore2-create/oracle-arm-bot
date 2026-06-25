@@ -41,6 +41,8 @@ jobs:
           cat oci.env
           cat oci_config
           ls -la
+          cat launch_instance.log || true
+          cat setup_and_info.log || true
 
       - name: Run script
         run: timeout 250 python main.py || true
