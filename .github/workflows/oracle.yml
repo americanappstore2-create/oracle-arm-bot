@@ -46,3 +46,4 @@ jobs:
 
       - name: Run script
         run: timeout 250 python main.py || true
+        
