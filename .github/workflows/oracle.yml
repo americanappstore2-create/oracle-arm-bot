@@ -26,17 +26,15 @@ jobs:
 
       - name: Create oci.env
         run: |
-          cat > oci.env << EOF
-          OCI_CONFIG=${{ github.workspace }}/oci_config
-          OCT_FREE_AD=${{ secrets.OCT_FREE_AD }}
-          OCI_SUBNET_ID=${{ secrets.OCI_SUBNET_ID }}
-          OCI_IMAGE_ID=${{ secrets.OCI_IMAGE_ID }}
-          DISPLAY_NAME=my-arm-instance
-          REQUEST_WAIT_TIME_SECS=50
-          ASSIGN_PUBLIC_IP=True
-          NOTIFY_EMAIL=False
-          SSH_AUTHORIZED_KEYS_FILE=${{ github.workspace }}/ssh_key.pub
-          EOF
+          echo "OCI_CONFIG=${{ github.workspace }}/oci_config" > oci.env
+          echo "OCT_FREE_AD=${{ secrets.OCT_FREE_AD }}" >> oci.env
+          echo "OCI_SUBNET_ID=${{ secrets.OCI_SUBNET_ID }}" >> oci.env
+          echo "OCI_IMAGE_ID=${{ secrets.OCI_IMAGE_ID }}" >> oci.env
+          echo "DISPLAY_NAME=my-arm-instance" >> oci.env
+          echo "REQUEST_WAIT_TIME_SECS=50" >> oci.env
+          echo "ASSIGN_PUBLIC_IP=True" >> oci.env
+          echo "NOTIFY_EMAIL=False" >> oci.env
+          echo "SSH_AUTHORIZED_KEYS_FILE=${{ github.workspace }}/ssh_key.pub" >> oci.env
 
       - name: Run script
         run: timeout 250 python main.py || true
