@@ -36,5 +36,11 @@ jobs:
           echo "NOTIFY_EMAIL=False" >> oci.env
           echo "SSH_AUTHORIZED_KEYS_FILE=${{ github.workspace }}/ssh_key.pub" >> oci.env
 
+      - name: Debug
+        run: |
+          cat oci.env
+          cat oci_config
+          ls -la
+
       - name: Run script
         run: timeout 250 python main.py || true
