@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaa6l36grwqolk3h3dehucdboaex4ajck4ethlfjb5jk2kwjthvjkpa
+fingerprint=0a:21:c0:dc:a9:8a:d8:ad:84:fa:55:2b:24:d0:cb:db
+tenancy=ocid1.tenancy.oc1..aaaaaaaaecz5yqzmduaxeffmjbk6grd7s6as3fgynmcqhxqsgpi67gzse5ba
+region=eu-frankfurt-1
+key_file=C:\Users\Home\Desktop\oracle-freetier-instance-creation-main\oci_api_private_key.pem

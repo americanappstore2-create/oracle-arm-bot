@@ -1,0 +1,18 @@
+2026-06-26 02:02:33,896 - INFO - OCI_TENANCY: ocid1.tenancy.oc1..aaaaaaaaecz5yqzmduaxeffmjbk6grd7s6as3fgynmcqhxqsgpi67gzse5ba
+2026-06-26 02:02:34,063 - INFO - OCI_AD_NAME: ['OTMr:EU-FRANKFURT-1-AD-1', 'OTMr:EU-FRANKFURT-1-AD-2', 'OTMr:EU-FRANKFURT-1-AD-3']
+2026-06-26 02:02:34,064 - INFO - OCI_SUBNET_ID: ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaa7qizvac2tgw6sefh4hzvyljthcr2hwd5w6gaevxbchrv4dbch2ea
+2026-06-26 02:02:34,065 - INFO - SSH key doesn't exist... Generating SSH Key Pair
+2026-06-26 02:03:37,513 - INFO - OCI_TENANCY: ocid1.tenancy.oc1..aaaaaaaaecz5yqzmduaxeffmjbk6grd7s6as3fgynmcqhxqsgpi67gzse5ba
+2026-06-26 02:03:38,126 - INFO - OCI_AD_NAME: ['OTMr:EU-FRANKFURT-1-AD-1', 'OTMr:EU-FRANKFURT-1-AD-2', 'OTMr:EU-FRANKFURT-1-AD-3']
+2026-06-26 02:03:38,127 - INFO - OCI_SUBNET_ID: ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaa7qizvac2tgw6sefh4hzvyljthcr2hwd5w6gaevxbchrv4dbch2ea
+2026-06-26 02:03:38,127 - INFO - SSH key doesn't exist... Generating SSH Key Pair
+2026-06-26 02:03:41,199 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:04:43,896 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:05:45,876 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:06:48,107 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:07:52,718 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}

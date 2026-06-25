@@ -1,0 +1,10 @@
+2026-06-26 02:03:41,199 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:04:43,896 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:05:45,876 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:06:48,107 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
+2026-06-26 02:07:52,718 - INFO - Command: launch_instance--
+Output: {'status': 500, 'code': 'InternalError', 'message': 'Out of host capacity.'}
